@@ -24,7 +24,7 @@ endif()
 target_compile_features(
 	${PROJECT_NAME}
 	PRIVATE
-		c_std_23
+		c_std_99
 )
 
 target_sources(
