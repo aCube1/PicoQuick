@@ -35,8 +35,6 @@ target_sources(
 
 target_include_directories(
 	${PROJECT_NAME}
-	PUBLIC
-		"${CMAKE_SOURCE_DIR}/include"
 	PRIVATE
 		"${CMAKE_SOURCE_DIR}/src"
 )

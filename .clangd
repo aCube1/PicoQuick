@@ -1,4 +1,7 @@
 ---
+CompileFlags:
+    Add: [-DPQP_IMPL]
+
 Diagnostics:
     UnusedIncludes: Strict
     ClangTidy:
