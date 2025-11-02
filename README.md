@@ -29,6 +29,19 @@ $ ./build/bin/pico data/input.txt
 
 ## Instruction Encoding
 
+```asm
+	0F 0E 0D 0C 0B 0A 09 08 07 06 05 04 03 02 01 00
+	RX RX RX RX RY RY RY RY OP OP OP OP OP OP OP OP
+
+	FF FE FD FC FB FA F9 F8 F7 F6 F5 F4 F3 F2 F1 F0
+	IM IM IM IM IM IM IM IM IM IM IM IM IM IM IM IM
+
+	[7:0]   OP -> Operation Code
+	[11:8]  RY -> Register Y (r0-r15)
+	[15:12] RX -> Register X (r0-r15)
+	[31:16] IM -> Immediate Data (always sign-extended)
+```
+
 | Instruction    | Opcode |  Data0   |  Data1   |   Data2    | Operation                                  |
 | -------------- | :----: | :------: | :------: | :--------: | :----------------------------------------- |
 | `mov rx, i16`  | `0x00` | rx (3-0) |    --    | imm (15-0) | `rx = sign_extend(i16)`                    |
